@@ -1,101 +1,99 @@
-import Image from "next/image";
+import Image from 'next/image';
+import homeimage from '@/app/public/homeimage.png';
+import img1 from "@/app/public/img1.png";
+import img2 from "@/app/public/img2.png";
+import img3 from "@/app/public/img3.png";
+import img4 from "@/app/public/img4.png";
+import Feature from "@/app/public/Feature.png";
+import Gear from "@/app/public/Gear.png";
+import essential from "@/app/public/essential.png";
+import clothes from "@/app/public/clothes.png";
+import categories from "@/app/public/categories.png";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      <div className="home-page">
+        <div className="nike-bar">
+          <h1>Hello Nike App</h1>
+          <p>
+            Download the app to access everything Nike&apos;s <span>Get Your Great</span>
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <Image
+          className="home-image"
+          src={homeimage}
+          alt="shoe"
+          height={700}
+          width={1344}
+        />
+
+        <div className="first-look">
+          <h2>First Look</h2>
+          <h1>NIKE AIR MAX PULSE</h1>
+          <p>
+            Extreme comfort. Hyper durable. Max volume. Introducing the Air Max Pulse
+            —designed to push you past your limits and help you go to the max.
+          </p>
+
+          <div className="buttons">
+            <button className="one-button">Notify Me</button>
+            <button className="one-button">Shop Air Max</button>
+          </div>
+        </div>
+      </div>
+
+      <div className="bar">
+        <div className="left-side">
+          <p>Best of Air Max</p>
+        </div>
+        <div className="right-side">
+          <span className="shop-text">Shop</span>
+          <button className="circle-button">
+          &lt;
+          </button>
+          <button className="circle-button">
+          &gt;
+          </button>
+        </div>
+      </div>
+
+      <div className="blog-container">
+        <div className="blog">
+          <Image src={img1} alt="Blog Image 1" className="blog-image" width={441} height={441} />
+        </div>
+        <div className="blog">
+          <Image src={img2} alt="Blog Image 2" className="blog-image" width={441} height={441} />
+        </div>
+        <div className="blog">
+          <Image src={img3} alt="Blog Image 3" className="blog-image" width={441} height={441} />
+        </div>
+        <div className="blog">
+          <Image src={img4} alt="Blog Image 4" className="blog-image" width={441} height={441} />
+          <p className="blog-text">Nike Air Max SYSTM</p>
+          <h3>Womens Shoes</h3>
+        </div>
+      </div>
+
+      <div className="feature-page">
+        <Image src={Feature} alt="feature" />
+      </div>
+
+      <div className="Gear-up-page">
+        <Image src={Gear} alt="products" />
+      </div>
+
+      <div className="essential-page">
+        <Image src={essential} alt="essential" />
+      </div>
+
+      <div className="clothes">
+        <Image src={clothes} alt="essentials" />
+        <div className="categories">
+          <Image src={categories} alt="categories" />
+        </div>
+      </div>
     </div>
   );
 }

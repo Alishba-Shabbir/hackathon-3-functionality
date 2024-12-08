@@ -2,20 +2,771 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+.body{
+  
+  width: 1440px;
+  justify-content: center;
+  align-items: center;
+}
+/* Top Header Styles */
+.top-header {
+  margin: 0 20px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 36px;
+  width: 1440px;
+  padding: 10px 20px; /* Add padding for spacing */
+  background-color: #ebe9e9;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Adjust logo styling */
+.first-logo {
+  margin-left: 10px; /* Center align on small screens */
+  color: #111111;
+}
+
+/* Navigation Buttons */
+.top-buttons ul {
+  display: flex;
+  list-style: none;
+  gap: 20px; /* Space between buttons */
+  padding: 0;
+  margin-right: 100;
+}
+
+/* Individual Button Styles */
+.top-buttons li {
+  position: relative;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #111111;
+}
+
+.top-buttons li + li::before {
+  content: "|";
+  margin-right: 10px;
+  color: #000;
+}
+
+/* Hover Effect for Links */
+.top-buttons li a {
+  text-decoration: none;
+  color: #111111;
+  transition: color 0.3s ease;
+}
+
+.top-buttons li a:hover {
+  color: #000; /* Darker color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .top-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    width: 768px;
+  }
+
+  .top-buttons ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .top-buttons li + li::before {
+    content: ""; /* Remove separator on small screens */
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@media (max-width: 480px) {
+  .top-header{
+    width: 480px;
+  }
+  .first-logo {
+    margin-left: 0;
+    height: 16px; /* Smaller logo for tiny screens */
+    width: 16px;
+  }
+
+  .top-buttons li {
+    font-size: 10px; /* Smaller font size for smaller screens */
+  }
 }
+
+
+
+
+
+
+.home-image{
+  justify-content: center;
+  margin: 0 50px 0 50px;
+}
+
+.nike-bar{
+  height: 44px;
+  width: 1440px;
+  margin-top: 10px;
+ 
+
+}
+.nike-bar h1{
+  width: 150px;
+  height: 17px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 16px;
+  text-align: center;
+  margin: 0 600px 0 600px;
+  color: #111111;
+}
+
+.nike-bar p{
+  width: 301px;
+  height: 24px;
+  font-family:  Helvetica;
+  font-weight: 400px;
+  font-size: 11px;
+  line-height: 24px;
+  text-align: center;
+  margin-left:  530px;
+  color: #111111;
+}
+.nike-bar span{
+  text-decoration: underline;
+  font-style: solid;
+  
+}
+
+.first-look{
+  height: 229px;
+  width: 1008px;
+  margin-top: 48px;
+  margin-left: 168px;
+}
+.first-look h2{
+   width: 80px;
+   height: 24px;
+   margin-left: 468px;
+   font-family: Helvetica ;
+   font-size: 15px;
+   font-weight: bold;
+   line-height: 24px;
+   text-align: center;
+   text-decoration-skip-ink: none;
+  color: #111111;
+}
+.first-look h1{
+  width: 574px;
+  height: 60px;
+  top: 28px;
+  margin-left: 220px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Helvetica;
+font-size: 56px;
+font-weight: 500;
+line-height: 60px;
+text-align: center;
+text-decoration-skip-ink: none;
+}
+
+.first-look p {
+width: 1,020px;
+height: 48px;
+padding: 20px 240px 80px 240px;
+gap: 0px;
+opacity: 0px;
+font-family: Helvetica;
+font-size: 15px;
+font-weight: 400;
+line-height: 24px;
+text-align: center;
+text-decoration-skip-ink: none;
+
+}
+
+.buttons{
+  margin-left: 400px;
+}
+.one-button{
+background-color: #111111;
+border-radius: 30px;
+color: white;
+padding: 7px 22px 7px 22px;
+margin-right: 6px;
+}
+
+
+.bar {
+  display: flex;
+  align-items: center;
+  height: 52px; /* Fixed height */
+  width: 1440; /* Full width */
+  background-color: #f5f5f5; /* Light gray background */
+  padding: 0 16px; /* Padding on left and right */
+  box-sizing: border-box;
+  margin: 96px 20px 0 20px;
+}
+
+/* Left Side Text */
+.left-text {
+  margin-left: 48px; /* Gap from left */
+}
+
+.left-text p {
+  font-family: 'Helvetica Neue', sans-serif; /* Font */
+  font-weight: 500; /* Font weight */
+  font-size: 22px; /* Font size */
+  line-height: 28px; /* Line height */
+  margin: 0; /* Remove default margin */
+}
+
+/* Right Side */
+.right-side {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push to the right */
+  gap: 16px; /* Space between elements */
+}
+
+.shop-text {
+  color: #333; /* Dark gray text */
+  font-weight: 500; /* Medium font weight */
+}
+
+/* Buttons */
+.circle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px; /* Button width */
+  height: 48px; /* Button height */
+  border-radius: 24px; /* Makes it circular */
+  background-color: #d1d1d1; /* Light gray button background */
+  color: #555; /* Medium gray text color */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Pointer on hover */
+  font-size: 18px; /* Font size for icons */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.circle-button:hover {
+  background-color: #c0c0c0; /* Darker gray on hover */
+}
+
+
+
+
+
+
+
+
+.circle-button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.circle-button:hover {
+  background-color:grey;
+}
+
+
+
+
+
+
+/* Blog Section */
+.blog-container {
+  margin-top: 40px;
+  display: flex;
+  margin-left: 80px;
+  width: 1440px;
+  gap: 20px;
+}
+
+.blogs {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+
+
+.blog {
+  width: 441px; /* Each blog takes up 441px */
+  height: 500px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.blog img {
+  object-fit: cover;
+}
+
+.blog-text {
+  text-align: left;
+  font-family: Helvetica;
+  line-height: 24px;
+  font-size: 15px;
+  color:black;
+}
+.blog h3{
+  color: #6a6a6a;
+  padding: 0;
+  font-weight: 400;
+}
+
+.feature-page{
+  margin: 50px;
+}
+
+.Gear-up-page{
+  margin: 80px 50px 50px 50px;
+}
+
+
+
+
+
+/* Responsive Styles for Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .home-image {
+    margin: 0 30px; /* Reduce side margins */
+  }
+
+  .nike-bar h1 {
+    font-size: 1rem; /* Slightly smaller header font */
+  }
+
+  .nike-bar p {
+    font-size: 1rem; /* Adjust paragraph font size */
+    margin-left: 0; /* Center-align text */
+  }
+
+  .first-look h1 {
+    font-size: 2.5rem; /* Smaller heading for tablets */
+  }
+
+  .first-look p {
+    font-size: 1rem; /* Adjust paragraph font size */
+    padding: 0 100px; /* Add more padding */
+  }
+  .sign-up-container{
+    align-items: left;
+    justify-content: left;
+    margin: 50px 0 50px 0;
+  }
+
+  .buttons {
+    flex-direction: row; /* Keep buttons side by side */
+    gap: 2px;
+  }
+
+  .circle-button {
+    width: 24px; /* Adjust button size */
+    height: 24px;
+    font-size: 1rem;
+  }
+  .bar{
+    width: 1024px;
+  }
+  
+
+  .blog {
+    max-width: 48%; /* Two blogs per row */
+    margin: 10px ;
+    display: block;
+  }
+  .feature-page{
+    justify-content: center;
+    margin: 50px;
+  }
+  .essential-page{
+    margin: 50px;
+    justify-content: center;
+  }
+}
+
+/* Responsive Styles for Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .home-image {
+    margin: 0 20px; /* Further reduce margins */
+  }
+
+  .nike-bar h1 {
+    font-size: 1.2rem; /* Scale down header font */
+
+  }
+
+  .nike-bar p {
+    font-size: 0.9rem; /* Scale down paragraph font */
+  }
+
+  .first-look h1 {
+    font-size: 2rem; /* Scale down main heading */
+    margin-left: 0;
+  }
+  .first-look h2{
+    margin-left: 0;
+  }
+ .bar{
+  width: 768px;
+ }
+  .first-look p {
+    font-size: 1rem; /* Adjust paragraph font size */
+    padding: 0 250px; /* Add padding for better spacing */
+    margin: 0 200px 0 0;
+  
+  }
+
+  .buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    margin: 80px 0 30px 100px;
+    gap: 10px;
+  }
+
+  .circle-button {
+    width: 40px; /* Reduce button size */
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .blog-container {
+    margin-left: 10px; /* Reduce side margins */
+  }
+
+  .blog {
+    max-width: 100%; /* Full-width blogs */
+    margin: 10px 0;
+  }
+  .sign-up-container{
+    align-items: left;
+    justify-content: left;
+    margin: 50px 0 50px 0;
+  }
+}
+
+/* Responsive Styles for Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .nike-bar h1 {
+    font-size: 1rem; /* Further scale down font */
+  }
+
+  .nike-bar p {
+    font-size: 0.8rem; /* Adjust paragraph font size */
+  }
+.first-look{
+  width: 480px;
+  margin-left: 0;
+}
+  .first-look h1 {
+    font-size: 1.5rem;
+    width: 300px;
+  }
+
+  .first-look p {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  .buttons {
+    gap: 8px;
+  }
+
+  .circle-button {
+    width: 36px; /* Reduce button size further */
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .bar {
+    flex-direction: column; /* Stack bar elements */
+    text-align: center;
+    width: 480px;
+  }
+
+  .blog {
+    max-width: 100%; /* Full-width blogs */
+    margin: 5px 0;
+  }
+  .sign-up-container{
+    align-items: left;
+    justify-content: left;
+    margin: 50px 0 50px 0;
+  }
+
+  .blog img {
+    height: auto; /* Ensure images are fully responsive */
+  }
+}
+.essential-page{
+  margin: 50px;
+}
+.clothes{
+  margin: 50px;
+}
+
+.categories{
+  width: 880px;
+  height: 192px;
+  margin: 150px 280px 100px 300px;
+}
+
+
+
+
+
+
+
+
+
+
+.sign-up-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #FFFFFF;
+}
+
+.sign-up-content {
+  width: 380px;
+  height: 489px;
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.account-text {
+  width: 186.5px;
+  height: 57px;
+  margin-top: 46px;
+  margin-left: 68.84px;
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  opacity: 1;
+}
+
+.sign-up-form {
+  margin-top: 40px;
+}
+
+.input-field {
+  width: 324px;
+  height: 40px;
+  padding: 12px 17px;
+  margin-bottom: 15px;
+  border-radius: 3px 0px 0px 0px;
+  border: 1px solid #ccc;
+  opacity: 1;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forgot-password {
+  font-size: 12px;
+  color: #8D8D8D;
+  cursor: pointer;
+}
+
+.privacy-text {
+  font-size: 12px;
+  color: #929090;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.privacy-text a {
+  text-decoration: underline;
+  color: #8D8D8D;
+}
+
+.submit-button {
+  width: 324px;
+  height: 40px;
+  background-color: #000000;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 3px 0px 0px 0px;
+  padding: 10px 0;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background-color: #444;
+}
+
+.join-text {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15px;
+  color: #8D8D8D;
+}
+
+.join-text a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #000;
+}
+
+
+
+.join-page{
+  width: 1440px;
+  height: 900px;
+  padding: 10px;
+}
+
+.join-us-page {
+  display: flex;
+  width: 1440px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+.join-us-image {
+  margin-right: 20px;
+}
+
+.join-us-content {
+  background-color: white;
+  padding: 40px;
+  width: 380px;
+  height: 833px;
+  position: center;
+  top: 96px;
+  left: 515.5px;
+  gap: 0;
+  opacity: 1;
+}
+
+.join-us-content h1 {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.join-us-content p {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
+
+.join-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.join-form p{
+  color: #8D8D8D;
+}
+
+.join-form label {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+
+.input-box {
+  width: 324px;
+  height: 40px;
+  padding: 11.5px 7px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: 1px solid #e5e5e5;
+}
+
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+.gender-selection {
+  display: flex;
+  gap: 3px;
+  height: 43px ;
+  width:80px ;
+  margin-bottom: 10px;
+}
+.gender-selection .input-box{
+  height: 43px ;
+  width: 154px ;
+}
+
+
+.email-subscription  {
+  font-family: Inter, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+#email{
+  color: #c6c4c4a9;
+}
+
+.terms-text {
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  color: #8D8D8D;
+}
+
+.join-button {
+  width: 324px;
+  height: 40px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 11px 0;
+}
+
+.join-button:hover {
+  background-color: #333;
+}
+
