@@ -36,6 +36,7 @@ export default function Home() {
             Extreme comfort. Hyper durable. Max volume. Introducing the Air Max Pulse
             —designed to push you past your limits and help you go to the max.
           </p>
+          
 
           <div className="buttons">
             <button className="one-button">Notify Me</button>
@@ -90,7 +91,7 @@ export default function Home() {
 
       <div className="clothes">
         <Image src={clothes} alt="essentials" />
-        <div className="categories">
+        <div  className="m-10 max-w-full h-auto">
           <Image src={categories} alt="categories" />
         </div>
       </div>

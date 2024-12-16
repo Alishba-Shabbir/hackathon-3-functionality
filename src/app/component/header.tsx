@@ -90,13 +90,14 @@ export default function Header() {
           </div>
       
           {/* Wishlist Icon */}
-          <FaRegHeart className="text-gray-700 md:w-6 md:h-6 w-5 h-5 cursor-pointer hover:text-black" />
+          <FaRegHeart className="text-gray-700 md:w-6 md:h-6 w-5 h-5 cursor-pointer hover:text-black max-w-full h-auto " />
       
           {/* Cart Icon */}
-          <FaBagShopping className="text-gray-700 md:w-6 md:h-6 w-5 h-5 cursor-pointer hover:text-black" />
+          <Link href="/cart"> <FaBagShopping className="text-gray-700 md:w-6 md:h-6 w-5 h-5 cursor-pointer hover:text-gray-400 max-w-full h-auto" /></Link>
         </div>
       </div>
     </div>
+    
 
 
 

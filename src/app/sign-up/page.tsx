@@ -1,5 +1,5 @@
 import Image from "next/image";
-import nikelogotwo from "../public/nike-logo-two.png"; // Ensure the path is correct
+import nikelogotwo from "@/app/public/nike-logo-two.png"; // Ensure the path is correct
 
 export default function SignUp() {
   return (

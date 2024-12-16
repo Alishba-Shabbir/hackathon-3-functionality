@@ -8,17 +8,17 @@ export default function Footer() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                 {/* Column 1 */}
                 <div>
-                    <h3 className="text-sm font-semibold mb-4">FIND A STORE</h3>
+                    <h3>  <Link href="store" className="text-sm font-semibold mb-4">FIND A STORE </Link></h3>
                     <ul className="space-y-2 text-sm">
                         <li><Link href="#" className="hover:underline">Become a Member</Link></li>
-                        <li><Link href="#" className="hover:underline">Sign Up for Email</Link></li>
+                        <li><Link href="sign-up" className="hover:underline">Sign Up for Email</Link></li>
                         <li><Link href="#" className="hover:underline">Student Discounts</Link></li>
                     </ul>
                 </div>
 
                 {/* Column 2 */}
                 <div>
-                    <h3 className="text-sm font-semibold mb-4">GET HELP</h3>
+                    <h3> <Link href="help" className="text-sm font-semibold mb-4">GET HELP </Link></h3> 
                     <ul className="space-y-2 text-sm">
                         <li><Link href="#" className="hover:underline">Order Status</Link></li>
                         <li><Link href="#" className="hover:underline">Delivery</Link></li>
