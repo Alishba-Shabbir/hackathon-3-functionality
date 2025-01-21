@@ -1,36 +1,96 @@
-import Image from "next/image"
-import cartimg from "@/app/public/cartimg.png"
-import Link from "next/link"
-
-export default function Cart(){
-    return(
-        <div className="flex max-w-full h-auto">
-
-<div  className="ml-[60px] m-15 "><Image className="max-w-full h-auto" src={ cartimg} alt="cart" height={546} width={733}/></div>
-
-<div className="h-295 w-350">
-    <h1 className="h-33 w-96 ml-8 text-lg font-bold">Summary</h1>
-    <h3 className="flex justify-between items-center mt-5 ml-8">
-  <span className="text-gray-700 ">Subtotal</span>
-  <span className="text-gray-900 font-bold">&#8377;20890.00</span>
-</h3>
-    <h3 className="flex justify-between items-center mt-5 ml-8">
-  <span className="text-gray-700 ">Estimated Delivery &amp; Handling</span>
-  <span className="text-gray-900 ">Free</span>
-</h3>
 
 
-<h3 className="flex justify-between items-center w-[334.67px] h-[62px] mt-[50px] ml-[18px] border-t border-b pt-[17px] pr-[4.38px] pb-[17px] gap-[216.3px]">
-<span className="text-gray-700 ">Total</span>
-<span className="text-gray-900 ">&#8377;20890.00</span>
-</h3>
 
-<Link href="/member-checkout"><button className="w-[334.67px] h-[60px] mt-[45px] ml-[8px] rounded-[30px] pt-[18px] pr-[100.8px] pb-[18px] pl-[100.88px] bg-black text-white">
-  Member Checkout
-</button></Link>
+"use client";
 
+import Image from "next/image";
+import Link from "next/link";
+import { useCart } from "../context/CartContext";
 
-</div>
+export default function CartPage() {
+  const { cart, removeFromCart, clearCart } = useCart();
+
+  const totalPrice = cart.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
+
+  return (
+    <div className="max-w-6xl mx-auto py-10 px-6">
+      <h1 className="text-4xl font-bold mb-8">Your Shopping Cart</h1>
+      {cart.length === 0 ? (
+        <div className="text-center">
+          <p className="text-lg text-gray-600 mb-6">Your cart is currently empty.</p>
+          
+          
         </div>
-    )
+      ) : (
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2 space-y-4">
+            {cart.map((item) => (
+              <div
+                key={item.id}
+                className="flex items-center justify-between border-b pb-4"
+              >
+                <div className="flex items-center">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={80}
+                    height={80}
+                    className="rounded shadow"
+                  />
+                  <div className="ml-4">
+                    <h2 className="text-lg font-semibold">{item.name}</h2>
+                    <p className="text-sm text-gray-600">
+                      PKR {item.price} x {item.quantity}
+                    </p>
+                  </div>
+                  
+                </div>
+                <button
+                  onClick={() => removeFromCart(item.id)}
+                  className="text-red-600 hover:text-red-800"
+                >
+                  Remove
+                </button>
+              </div>
+              
+              
+            ))}
+            <div>
+          <Link
+            href="/store"
+            className="bg-black text-white px-4 py-2 rounded hover:bg-blue-900"
+          >
+            Continue Shopping
+          </Link>
+          </div>
+          </div>
+          
+          
+
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-semibold mb-4">Cart Summary</h2>
+            <div className="flex justify-between mb-2">
+              <span className="text-gray-700">Subtotal</span>
+              <span className="font-bold">PKR {totalPrice.toFixed(2)}</span>
+            </div>
+            <hr className="my-4" />
+            <button
+              onClick={clearCart}
+              className="bg-red-500 text-white w-full py-2 rounded hover:bg-red-600 mb-4"
+            >
+              Clear Cart
+            </button>
+            <button
+              className="bg-black text-white w-full py-2 rounded hover:bg-green-700"
+            >
+              Proceed to Checkout
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }

@@ -1,4 +1,4 @@
-import Blog from "../component/blogs";
+import Blog from "../../app/blog/page";
 
 export default function Product (){
     return(

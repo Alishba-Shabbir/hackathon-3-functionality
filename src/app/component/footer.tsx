@@ -4,7 +4,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 export default function Footer() {
     return (
-        <div className="bg-black text-white py-8 px-6 w-[1440px]">
+        <div className="bg-black ml-[100px] text-white py-8 px-6 w-[1440px]">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                 {/* Column 1 */}
                 <div>

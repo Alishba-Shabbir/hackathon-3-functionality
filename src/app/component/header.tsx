@@ -3,9 +3,8 @@ import logo from "@/app/public/logo.png"
 import nikelogo from "@/app/public/nike-logo.png"
 import Link from "next/link"
 import React from "react";
-import { FaSearch  } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 import {FaBagShopping } from "react-icons/fa6";
-import {FaRegHeart } from "react-icons/fa6";
 import {FaBars } from "react-icons/fa6";
 
 export default function Header() {
@@ -28,7 +27,7 @@ export default function Header() {
           <div className="top-buttons">
             <ul>
             <li>
-        <Link href="/store">Find a Store</Link>
+        <Link href="/store">Find a Shoe</Link>
       </li>
       <li>
         <Link href="/help">Help </Link>
@@ -58,7 +57,7 @@ export default function Header() {
         </div>
       
         {/* Navigation Links */}
-        <nav className="hidden lg:flex gap-4 text-gray-700 font-medium text-sm md:text-base ">
+        <nav className=" text-center m-72 hidden lg:flex gap-4 text-gray-700 font-medium text-sm md:text-base ">
           {["New & Featured", "Men", "Women", "Kids", "Sale", "SNKRS"].map((item) => (
             <Link
               key={item}
@@ -76,24 +75,13 @@ export default function Header() {
             <FaBars className="text-2xl text-gray-700 hover:text-black" />
           </button>
         </div>
-      
-        {/* Icons Section */}
-        <div className="flex items-center gap-4">
-          {/* Search Input (Hidden on Small Screens) */}
-          <div className="relative hidden md:block">
-            <input
-              type="text"
-              placeholder="Search"
-              className="border border-gray-300 rounded-full pl-4 pr-10 py-2 text-sm focus:outline-none"
-            />
-            <FaSearch className="absolute right-3 top-2.5 text-gray-500" />
-          </div>
-      
-          {/* Wishlist Icon */}
-          <FaRegHeart className="text-gray-700 md:w-6 md:h-6 w-5 h-5 cursor-pointer hover:text-black max-w-full h-auto " />
-      
+          <div className="flex flex-auto gap-4 text-left ">
+            {/* Wishlist Icon */}
+          <Link href="/wishlist"><FaHeart className="text-gray-700 md:w-6 md:h-6 w-5 h-5 cursor-pointer hover:text-red-500 max-w-full  " />
+          </Link>
           {/* Cart Icon */}
-          <Link href="/cart"> <FaBagShopping className="text-gray-700 md:w-6 md:h-6 w-5 h-5 cursor-pointer hover:text-gray-400 max-w-full h-auto" /></Link>
+          <Link href="/cart"> <FaBagShopping className="text-gray-700 md:w-6 md:h-6 w-5 h-6 cursor-pointer hover:text-gray-400 max-w-full " /></Link>
+          </div>
         </div>
       </div>
     </div>
@@ -116,6 +104,6 @@ export default function Header() {
 
 
 
-       </div>
+       
     )
 }

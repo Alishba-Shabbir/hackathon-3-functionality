@@ -1,14 +1,16 @@
 import Image from 'next/image';
 import homeimage from '@/app/public/homeimage.png';
-import img1 from "@/app/public/img1.png";
-import img2 from "@/app/public/img2.png";
-import img3 from "@/app/public/img3.png";
-import img4 from "@/app/public/img4.png";
+// import img1 from "@/app/public/img1.png";
+// import img2 from "@/app/public/img2.png";
+// import img3 from "@/app/public/img3.png";
+// import img4 from "@/app/public/img4.png";
 import Feature from "@/app/public/Feature.png";
 import Gear from "@/app/public/Gear.png";
 import essential from "@/app/public/essential.png";
 import clothes from "@/app/public/clothes.png";
 import categories from "@/app/public/categories.png";
+import Link from 'next/link';
+import SHOES from './component/shoes/page';
 
 export default function Home() {
   return (
@@ -60,7 +62,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="blog-container">
+
+
+      <SHOES/>
+
+      {/* <div className="blog-container">
         <div className="blog">
           <Image src={img1} alt="Blog Image 1" className="blog-image" width={441} height={441} />
         </div>
@@ -75,10 +81,12 @@ export default function Home() {
           <p className="blog-text">Nike Air Max SYSTM</p>
           <h3>Womens Shoes</h3>
         </div>
-      </div>
+      </div> */}
 
       <div className="feature-page">
+        <Link href="/store">
         <Image src={Feature} alt="feature" />
+        </Link>
       </div>
 
       <div className="Gear-up-page">
