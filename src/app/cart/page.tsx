@@ -1,6 +1,3 @@
-
-
-
 "use client";
 
 import Image from "next/image";
@@ -21,8 +18,12 @@ export default function CartPage() {
       {cart.length === 0 ? (
         <div className="text-center">
           <p className="text-lg text-gray-600 mb-6">Your cart is currently empty.</p>
-          
-          
+          <Link
+            href="/store"
+            className="bg-black text-white px-4 py-2 rounded hover:bg-blue-900"
+          >
+            Continue Shopping
+          </Link>
         </div>
       ) : (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -46,7 +47,6 @@ export default function CartPage() {
                       PKR {item.price} x {item.quantity}
                     </p>
                   </div>
-                  
                 </div>
                 <button
                   onClick={() => removeFromCart(item.id)}
@@ -54,23 +54,20 @@ export default function CartPage() {
                 >
                   Remove
                 </button>
+                
               </div>
-              
-              
             ))}
             <div>
-          <Link
-            href="/store"
-            className="bg-black text-white px-4 py-2 rounded hover:bg-blue-900"
-          >
-            Continue Shopping
-          </Link>
+              <Link
+                href="/store"
+                className="bg-black text-white px-4 py-2 rounded hover:bg-blue-900"
+              >
+                Continue Shopping
+              </Link>
+            </div>
           </div>
-          </div>
-          
-          
 
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+          <div className="bg-gray-100 p-4 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold mb-4">Cart Summary</h2>
             <div className="flex justify-between mb-2">
               <span className="text-gray-700">Subtotal</span>
@@ -79,15 +76,16 @@ export default function CartPage() {
             <hr className="my-4" />
             <button
               onClick={clearCart}
-              className="bg-red-500 text-white w-full py-2 rounded hover:bg-red-600 mb-4"
+              className="bg-red-500 text-white w-full py-2 px-20 rounded hover:bg-red-600 mb-4"
             >
               Clear Cart
             </button>
-            <button
-              className="bg-black text-white w-full py-2 rounded hover:bg-green-700"
+            <Link
+              href="/checkout"
+              className="bg-black text-white w-full py-2 px-20 rounded hover:bg-green-700 mb-4"
             >
               Proceed to Checkout
-            </button>
+            </Link>
           </div>
         </div>
       )}

@@ -4,28 +4,54 @@ import { FaLocationDot } from "react-icons/fa6";
 
 export default function Footer() {
     return (
-        <div className="bg-black ml-[100px] text-white py-8 px-6 w-[1440px]">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="bg-black text-white py-8 px-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {/* Column 1 */}
                 <div>
-                    <h3>  <Link href="store" className="text-sm font-semibold mb-4">FIND A STORE </Link></h3>
+                    <h3>
+                        <Link href="store" className="text-sm font-semibold mb-4">
+                            FIND A STORE
+                        </Link>
+                    </h3>
                     <ul className="space-y-2 text-sm">
-                        <li><Link href="#" className="hover:underline">Become a Member</Link></li>
-                        <li><Link href="sign-up" className="hover:underline">Sign Up for Email</Link></li>
-                        <li><Link href="#" className="hover:underline">Student Discounts</Link></li>
+                        <li>
+                            <Link href="/join" className="hover:underline">Become a Member</Link>
+                        </li>
+                        <li>
+                            <Link href="/sign-up" className="hover:underline">Sign Up for Email</Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="hover:underline">Student Discounts</Link>
+                        </li>
                     </ul>
                 </div>
 
                 {/* Column 2 */}
                 <div>
-                    <h3> <Link href="help" className="text-sm font-semibold mb-4">GET HELP </Link></h3> 
+                    <h3>
+                        <Link href="help" className="text-sm font-semibold mb-4">
+                            GET HELP
+                        </Link>
+                    </h3>
                     <ul className="space-y-2 text-sm">
-                        <li><Link href="#" className="hover:underline">Order Status</Link></li>
-                        <li><Link href="#" className="hover:underline">Delivery</Link></li>
-                        <li><Link href="#" className="hover:underline">Returns</Link></li>
-                        <li><Link href="#" className="hover:underline">Payment Options</Link></li>
-                        <li><Link href="#" className="hover:underline">Contact Us on Nike.com</Link></li>
-                        <li><Link href="#" className="hover:underline">Contact Us on All Other Inquiries</Link></li>
+                        <li>
+                            <Link href="/cart" className="hover:underline">Order Status</Link>
+                        </li>
+                        <li>
+                            <Link href="/cart" className="hover:underline">Delivery</Link>
+                        </li>
+                        <li>
+                            <Link href="/cart" className="hover:underline">Returns</Link>
+                        </li>
+                        <li>
+                            <Link href="/cart" className="hover:underline">Payment Options</Link>
+                        </li>
+                        <li>
+                            <Link href="/help" className="hover:underline">Contact Us on Nike.com</Link>
+                        </li>
+                        <li>
+                            <Link href="/help" className="hover:underline">Contact Us on All Other Inquiries</Link>
+                        </li>
                     </ul>
                 </div>
 
@@ -33,10 +59,18 @@ export default function Footer() {
                 <div>
                     <h3 className="text-sm font-semibold mb-4">ABOUT NIKE</h3>
                     <ul className="space-y-2 text-sm">
-                        <li><Link href="#" className="hover:underline">News</Link></li>
-                        <li><Link href="#" className="hover:underline">Careers</Link></li>
-                        <li><Link href="#" className="hover:underline">Investors</Link></li>
-                        <li><Link href="#" className="hover:underline">Sustainability</Link></li>
+                        <li>
+                            <Link href="#" className="hover:underline">News</Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="hover:underline">Careers</Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="hover:underline">Investors</Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="hover:underline">Sustainability</Link>
+                        </li>
                     </ul>
                 </div>
 
@@ -52,9 +86,9 @@ export default function Footer() {
             {/* Bottom Section */}
             <div className="mt-8 flex flex-wrap justify-between items-center text-xs text-gray-400">
                 {/* Country and Copyright */}
-                <div className="flex mb-4 md:mb-0 gap-2">
-                    <FaLocationDot className="text-lg cursor-pointer hover:text-white-400"/>
-                    <p  className=" cursor-pointer hover:text-white-600"> India</p>
+                <div className="flex mb-4 md:mb-0 gap-2 items-center">
+                    <FaLocationDot className="text-lg cursor-pointer hover:text-white-400" />
+                    <p className="cursor-pointer hover:text-white">India</p>
                     <p>&copy; 2023 Nike, Inc. All Rights Reserved</p>
                 </div>
 
