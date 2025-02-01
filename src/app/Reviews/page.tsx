@@ -1,4 +1,6 @@
 // components/Reviews.tsx
+'use client'; // Add this line at the top of your file
+
 import { useState } from "react";
 
 interface Review {
