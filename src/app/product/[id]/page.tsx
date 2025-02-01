@@ -265,7 +265,7 @@ export default function ProductPage({ params }: { params: Promise<Params> }) {
         </div>
         <button
           onClick={handleSubmitReview}
-          className="bg-black text-white px-6 py-2 rounded"
+          className="bg-black text-white px-6 py-2 rounded hover:bg-blue-400"
         >
           Submit Review
         </button>
@@ -288,3 +288,4 @@ export default function ProductPage({ params }: { params: Promise<Params> }) {
     </div>
   );
 }
+

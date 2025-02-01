@@ -4,6 +4,7 @@ import { useCart } from "../context/CartContext";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image"; // Import the Image component
 
 export default function CheckoutPage() {
   const { cart, clearCart } = useCart();
@@ -30,16 +31,14 @@ export default function CheckoutPage() {
 
       {cart.length === 0 ? (
         <p>Your cart is empty. Please add items to your cart before checking out.  </p>
-            
-      
-        
       ) : (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-4">
             {cart.map((item) => (
               <div key={item.id} className="flex items-center justify-between border-b pb-4">
                 <div className="flex items-center">
-                  <img
+                  {/* Replaced img with Image component */}
+                  <Image
                     src={item.image}
                     alt={item.name}
                     width={80}
@@ -109,13 +108,13 @@ export default function CheckoutPage() {
         </div>
       )}
       <div className=" mt-6">
-            <Link
-                href="/store"
-                className="bg-black text-white px-4 py-2 rounded hover:bg-blue-900"
-              >
-                Continue Shopping
-              </Link>
-            </div>
+        <Link
+          href="/store"
+          className="bg-black text-white px-4 py-2 rounded hover:bg-blue-900"
+        >
+          Continue Shopping
+        </Link>
+      </div>
     </div>
   );
 }
