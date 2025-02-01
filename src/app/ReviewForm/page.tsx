@@ -1,4 +1,7 @@
 // components/ReviewForm.tsx
+
+'use client'; // Add this line at the top to mark it as a client-side component
+
 import { useState } from "react";
 
 interface ReviewFormProps {
